@@ -28,12 +28,12 @@ class HomeAppBar extends StatelessWidget{
           Badge(
           backgroundColor : Colors.red,
           padding: const EdgeInsets.all(7),
-            badgeContent : const Text(
-            "3" ,
-           style: TextStyle(
-            color: Colors.white,
-          ),
-          ),
+          //   badgeContent : const Text(
+          //   "3" ,
+          //  style: TextStyle(
+          //   color: Colors.white,
+          // ),
+          // ),
 
           child: InkWell(
             onTap: () {},
