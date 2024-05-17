@@ -10,7 +10,8 @@ class ItemsWidget extends StatelessWidget {
         childAspectRatio: 0.7, // Adjusted aspect ratio
         crossAxisCount: 2,
         shrinkWrap: true,
-        physics: const NeverScrollableScrollPhysics(), // Disable GridView's own scrolling
+        physics:
+            const NeverScrollableScrollPhysics(), // Disable GridView's own scrolling
         children: [
           for (int i = 1; i < 11; i++)
             Container(
@@ -48,7 +49,9 @@ class ItemsWidget extends StatelessWidget {
                     ],
                   ),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushNamed(context, "itemPage");
+                    },
                     child: Container(
                       margin: const EdgeInsets.all(5), // Reduced margin
                       child: Image.asset(
@@ -60,7 +63,8 @@ class ItemsWidget extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    padding: const EdgeInsets.only(bottom: 4), // Reduced padding
+                    padding:
+                        const EdgeInsets.only(bottom: 4), // Reduced padding
                     child: const Text(
                       "Product title",
                       style: TextStyle(
@@ -78,7 +82,8 @@ class ItemsWidget extends StatelessWidget {
                         color: Color(0xFF4C53A5),
                       ),
                       maxLines: 3, // Limits to 3 lines
-                      overflow: TextOverflow.ellipsis, // Adds ellipsis for overflow
+                      overflow:
+                          TextOverflow.ellipsis, // Adds ellipsis for overflow
                     ),
                   ),
                   const Padding(
